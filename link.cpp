@@ -8,12 +8,12 @@ class Node
         Node *next;
 };
 
-class List
+class LinkedList
 {
     Node *START;
 
 public:
-    List()
+    LinkedList()
     {
         START = NULL;
     }
@@ -96,63 +96,32 @@ public:
         else
         {
             cout << "\nData didalam list adalah :\n";
-            currentNode = currentNode->next;
+            Node *currentNode = START;
+            while (currentNode != NULL)
+            {
+                cout << currentNode->noMhs << endl;
+                currentNode = currentNode->next;
+            }
+            cout << endl;
         }
-        cout << endl
     }
-}
+};
 
 int main ()
 {
-    List mhs;
+    LinkedList mhs;
     int nim;
     char ch;
-    while(1)
+    do
     {
-        cout
-            <<"Menu" << endl;
-            cout << endl
-                << "1. Menambah data kedalam list" << endl;
-            cout << "2. Menghapus data dari halaman list" <<endl;
-            cout << "Menampilkan data dalam list" << endl;
-            cout << "4. Mencari data dalam list" << endl;
-            cout << " 5. Keluar " << endl;
-            cout
-                << "Masukan pilihan (1-5): " << endl;
-                cin >> ch;
-    }
-    void traverse()
-    {
-        if (listEmpty())
-        {
-            cout << "\nList Kosong\n";
-        }
-        else
-        {
-            cout << "\nData didalam list adalah :\n";
-            currentNode = currentNode->next;
-        }
+        cout <<"Menu" << endl;
+        cout << "1. Menambah data kedalam list" << endl;
+        cout << "2. Menghapus data dari halaman list" <<endl;
+        cout << "3. Menampilkan data dalam list" << endl;
+        cout << "4. Mencari data dalam list" << endl;
+        cout << "5. Keluar " << endl;
         cout << endl
-    }
-}
+             << "Masukan pilihan (1-5): " << endl;
+        cin >> ch;
 
-int main ()
-{
-    List mhs;
-    int nim;
-    char ch;
-    while(1)
-    {
-        cout
-            <<"Menu" << endl;
-            cout << endl
-                << "1. Menambah data kedalam list" << endl;
-            cout << "2. Menghapus data dari halaman list" <<endl;
-            cout << "Menampilkan data dalam list" << endl;
-            cout << "4. Mencari data dalam list" << endl;
-            cout << " 5. Keluar " << endl;
-            cout
-                << "Masukan pilihan (1-5): " << endl;
-                cin >> ch;
-    }
-}
+        
