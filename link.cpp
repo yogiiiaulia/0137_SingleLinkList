@@ -8,3 +8,7 @@ class Node
         Node *next;
 };
 
+class List
+{
+    Node *START;
+
